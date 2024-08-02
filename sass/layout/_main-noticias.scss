@@ -1,0 +1,53 @@
+/* noticias*/
+
+.news-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    text-align: left;
+
+    .news-item {
+        background: rgba(0, 0, 0, 0.8);
+        padding: 20px;
+        border-radius: 10px;
+        animation: fadeIn 1.5s ease-out forwards; // Animación aplicada directamente
+        
+        &:nth-child(1) {
+            animation-delay: 0.3s; // Retrasos para hacer la animación secuencial
+        }
+        &:nth-child(2) {
+            animation-delay: 0.6s;
+        }
+        &:nth-child(3) {
+            animation-delay: 0.9s;
+        }
+
+        &:hover {
+            transform: scale(1.05);  // Efecto de escalado al pasar el ratón
+            transition: transform 0.3s ease;  // Transición suave para el transform
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.noticias-background {
+    background-image: url(map-get($background-images, 'noticias'));
+    background-size: cover;
+    background-position: center;
+}

@@ -1,0 +1,55 @@
+main {
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    text-align: center;
+    
+    
+    h1, h2, ul {
+        display:table;
+        background: rgba(0, 0, 0, 0.8); /* Fondo semitransparente */
+        padding: 10px;
+        border-radius: 10px;
+    }
+    
+    
+    h1 {
+        font-size: 2.5em;
+        margin: 0;
+    }
+    
+    h2 {
+        font-size: 1.5em;
+        font-weight: lighter;
+        margin: 10px 0;
+        text-align: left;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        text-align: left;
+        li {
+        margin: 10px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .benefit-image{
+            flex: 0 0 150px;
+            img {
+                width: 100%;
+                height: auto; 
+            }
+        }
+        .use-image {
+            flex: 0 0 150px;
+            img {
+                width: 100%;
+                height: auto; 
+            }
+        }
+        }
+    }
+}
+

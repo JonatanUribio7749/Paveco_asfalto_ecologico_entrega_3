@@ -1,0 +1,30 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: $color-secondary;
+    .logo img {
+        height: 100px;
+    }
+
+    .nav-links {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        padding: 10px 20px;
+        li{
+            margin: 0 10px;
+        }
+        a{
+            text-decoration: none;
+            color: $color-text;
+            font-weight: 300;
+            
+        }
+        a:hover{
+            color: $color-primary;
+        }
+        }
+    }
+    

@@ -1,0 +1,76 @@
+/* Ficha tecnica*/
+
+.tech-specs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    text-align: left;
+  
+    article {
+      background: rgba(0, 0, 0, 0.8);
+      padding: 20px;
+      border-radius: 10px;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.5s ease-in-out;
+      will-change: opacity, transform;
+  
+      &:nth-child(odd) {
+        animation: slideInLeft 0.5s forwards;
+      }
+      &:nth-child(even) {
+        animation: slideInRight 0.5s forwards;
+      }
+  
+      &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); 
+      }
+    }
+  
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      opacity: 0;
+      animation: fadeIn 1s forwards;
+    }
+  
+    @keyframes slideInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+  
+    @keyframes slideInRight {
+      from {
+        opacity: 0;
+        transform: translateX(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+  
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  }
+  
+  .ficha-tecnica-background {
+    background-image: url(map-get($background-images, 'ficha-tecnica'));
+    background-size: cover;
+    background-position: center;
+    transition: background-image 0.5s ease-in-out;
+  }

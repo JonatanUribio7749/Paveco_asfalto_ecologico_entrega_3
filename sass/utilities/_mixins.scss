@@ -1,0 +1,40 @@
+
+@mixin button-styles($bg-color, $hover-color) {
+    background-color: $bg-color;
+    color: $color-text;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  
+    &:hover {
+      background-color: $hover-color;
+    }
+  }
+  
+
+  @mixin form-input-styles {
+    background: rgba(0, 0, 0, 0.8);
+    color: $color-text;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+
+  @mixin image-styles($max-width, $radius) {
+    width: 100%;
+    max-width: $max-width;
+    height: auto;
+    border-radius: $radius;
+
+
+    &:hover {
+        transform: scale(1.05); 
+        }
+    
+}
+
+
+
+
