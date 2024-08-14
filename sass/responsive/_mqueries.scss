@@ -79,4 +79,62 @@ main {
             transform: translateY(0);
         }
     }
+
+    body {
+        font-family: $font-primary;
+        margin: 0px;
+        padding: 0px;
+        color: $color-text;
+        background-color: darkgray; /* Fondo del cuerpo */
+    }
     
+    .footer-wrapper {
+        background-color: #2c3e50; /* Fondo oscuro para cubrir completamente */
+        color: #ffffff;
+        padding: 10px 20px;
+        margin: 0; /* Asegura que no haya márgenes adicionales */
+        border-top: 2px solid #28a745; /* Línea verde superior */
+        border-bottom: none; /* Asegura que no haya borde inferior */
+        box-shadow: none;
+        position: relative;
+    
+        .footer-logo {
+            img {
+                height: 50px;
+                margin-right: 10px;
+            }
+    
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    
+        .text-muted {
+            color: #ffffff !important; 
+            margin: 0; 
+    
+        .nav {
+            margin: 0; 
+            
+            li {
+                a {
+                    img {
+                        width: 24px;
+                        transition: transform 0.3s ease, filter 0.3s ease;
+    
+                        &:hover {
+                            transform: scale(1.2);
+                            filter: brightness(1.2); 
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    .footer-wrapper {
+        background-color: #2c3e50; 
+        padding: 0;
+        margin: 0;
+    }
+    }

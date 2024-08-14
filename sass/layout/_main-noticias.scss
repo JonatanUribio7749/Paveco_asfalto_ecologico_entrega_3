@@ -1,53 +1,103 @@
-/* noticias*/
+/* noticias */
 
 .news-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-direction: column;
     gap: 20px;
     text-align: left;
-
+  
     .news-item {
-        background: rgba(0, 0, 0, 0.8);
-        padding: 20px;
+      background: rgba(0, 0, 0, 0.8);
+      padding: 20px;
+      border-radius: 10px;
+      animation: fadeIn 1.5s ease-out forwards;
+      display: flex;
+      flex-direction: column; // Diseño vertical para móviles
+      align-items: center;
+  
+      &:nth-child(1) {
+        animation-delay: 0.3s;
+      }
+  
+      &:nth-child(2) {
+        animation-delay: 0.6s;
+      }
+  
+      &:nth-child(3) {
+        animation-delay: 0.9s;
+      }
+  
+      &:hover {
+        transform: scale(1.02);
+        transition: transform 0.3s ease;
+      }
+  
+      img {
+        width: 80%; // La imagen ocupa un 80% del ancho del contenedor
+        max-width: 600px; // Máximo ancho de la imagen para evitar que se deforme
+        height: auto;
         border-radius: 10px;
-        animation: fadeIn 1.5s ease-out forwards; // Animación aplicada directamente
-        
-        &:nth-child(1) {
-            animation-delay: 0.3s; // Retrasos para hacer la animación secuencial
-        }
-        &:nth-child(2) {
-            animation-delay: 0.6s;
-        }
-        &:nth-child(3) {
-            animation-delay: 0.9s;
-        }
-
-        &:hover {
-            transform: scale(1.05);  // Efecto de escalado al pasar el ratón
-            transition: transform 0.3s ease;  // Transición suave para el transform
-        }
-
-        img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-        }
+        margin-bottom: 10px;
+        object-fit: cover;
+        border: 3px solid #ffffff; // Borde de color blanco para destacar la imagen
+      }
+  
+      h3 {
+        margin-top: 10px;
+        text-align: center;
+      }
+  
+      p {
+        text-align: justify;
+      }
     }
-}
-
-@keyframes fadeIn {
+  }
+  
+  @media (min-width: 992px) { // Estilos para vista de escritorio
+    .news-item {
+      flex-direction: row; // Alinea horizontalmente los elementos dentro de cada noticia
+      align-items: center; 
+      gap: 20px; // Espaciado entre la imagen y el contenido de texto
+      padding: 20px;
+  
+      img {
+        width: 40%; // Imagen ocupa un 40% del ancho del contenedor
+        max-width: 400px; // Máximo ancho de la imagen para evitar que se deforme
+        margin: 0 auto; // Centra la imagen en su contenedor
+      }
+  
+      .news-content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+  
+      h3 {
+        text-align: left;
+        margin-bottom: 10px;
+      }
+  
+      p {
+        margin: 0;
+      }
+    }
+  }
+  
+  @keyframes fadeIn {
     from {
-        opacity: 0;
-        transform: translateY(20px);
+      opacity: 0;
+      transform: translateY(20px);
     }
     to {
-        opacity: 1;
-        transform: translateY(0);
+      opacity: 1;
+      transform: translateY(0);
     }
-}
-
-.noticias-background {
+  }
+  
+  .noticias-background {
     background-image: url(map-get($background-images, 'noticias'));
     background-size: cover;
     background-position: center;
-}
+  }
+  
