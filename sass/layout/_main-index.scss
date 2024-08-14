@@ -38,9 +38,9 @@ $background-images: (
     text-align: left;
     color: #ffffff;
     margin-bottom: 20px;
-    background-color: rgba(0, 0, 0, 0.7); /* Color del fondo negro */
-    padding: 10px 20px; /* Espacio alrededor del texto */
-    display: inline-block; /* Ajusta el ancho al texto */
+    background-color: rgba(0, 0, 0, 0.7); 
+    padding: 10px 20px; 
+    display: inline-block; 
 }
 
 
@@ -69,7 +69,6 @@ $background-images: (
     align-items: flex-start;
     width: 100%;
 
-    /* Ajustes responsivos para vistas pequeñas */
     @media (max-width: 768px) {
         flex-direction: column;
         align-items: center;
@@ -86,7 +85,6 @@ $background-images: (
         border-radius: 10px;
         margin-right: 20px;
 
-        /* Ajustes responsivos para vistas pequeñas */
         @media (max-width: 768px) {
             width: 80%;
             margin-right: 0;
@@ -103,7 +101,7 @@ $background-images: (
             color: #ffffff;
             font-size: 1.2rem;
 
-            /* Ajustes responsivos para vistas pequeñas */
+          
             @media (max-width: 768px) {
                 text-align: center;
             }
@@ -146,7 +144,7 @@ $background-images: (
         }
     }
 
-    /* Ajustes responsivos para vistas pequeñas */
+    
     @media (max-width: 768px) {
         flex: 1;
         margin-top: 20px;
